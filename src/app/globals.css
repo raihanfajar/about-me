@@ -112,6 +112,20 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+html {
+  /* Ini sangat penting untuk sticky */
+  scroll-behavior: smooth; /* Opsional, untuk scroll halus */
+  height: 100%; /* Pastikan html setinggi 100% */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* JANGAN gunakan height: 100vh atau overflow: hidden di sini jika Anda ingin scroll global */
+  min-height: 100vh; /* Minimum tinggi layar penuh, biarkan melebar jika konten banyak */
+  /* display: flex; flex-direction: column; (jika ingin flexbox untuk layout utama) */
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
