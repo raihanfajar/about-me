@@ -76,6 +76,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --font-geist-sans: var(--font-geist-sans-fallback, sans-serif);
+  --font-geist-mono: var(--font-geist-mono-fallback, monospace);
+  --font-poppins: var(--font-poppins-fallback, sans-serif);
 }
 
 .dark {
@@ -113,17 +116,22 @@
 }
 
 html {
-  /* Ini sangat penting untuk sticky */
-  scroll-behavior: smooth; /* Opsional, untuk scroll halus */
-  height: 100%; /* Pastikan html setinggi 100% */
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  /* JANGAN gunakan height: 100vh atau overflow: hidden di sini jika Anda ingin scroll global */
-  min-height: 100vh; /* Minimum tinggi layar penuh, biarkan melebar jika konten banyak */
-  /* display: flex; flex-direction: column; (jika ingin flexbox untuk layout utama) */
+  min-height: 100vh;
+  font-family: var(--font-poppins);
+}
+
+/* file: app/globals.css atau src/app/globals.css */
+.clip-dented-circle {
+  clip-path: path(
+    "M128,0 A128,128 0 1,1 0,128 C0,58 58,0 128,0 Z M20,128 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"
+  );
 }
 
 @layer base {
