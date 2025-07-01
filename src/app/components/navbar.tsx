@@ -32,10 +32,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    
-    <div className={`sticky top-4 z-50 container mx-auto mt-4 ${scrolled ? "bg-[#F5EE84] shadow-lg" : "bg-transparent"} rounded-full`}>
-      <nav className="mt-4 flex w-full items-center justify-center gap-10 rounded-full p-5 md:justify-between md:border-2 md:border-black md:shadow-xs">
-        <h1 className="text-2xl font-bold text-[#03045E]">
+    <div
+      className={`sticky top-4 z-50 container mx-auto mt-4 rounded-full px-6`}
+    >
+      <nav
+        className={`mt-4 flex w-full items-center justify-center gap-3 rounded-full p-5 md:justify-between md:border-2 md:border-black md:shadow-xs ${scrolled ? "bg-[#F5EE84] shadow-lg" : "bg-transparent"}`}
+      >
+        <h1 className="text-center text-2xl font-bold text-[#03045E]">
           Raihan Fajar Ramadhan
         </h1>
         <div className="hidden justify-evenly gap-20 text-lg font-medium md:flex">

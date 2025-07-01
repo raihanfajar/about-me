@@ -4,10 +4,10 @@ import Image from "next/image";
 const Section = () => {
   return (
     <>
-      <section className="container mx-auto flex gap-20">
-        {/* ABOUT */}
+      <section className="container mx-auto gap-20 px-10">
+        {/* HERO */}
         <div
-          className="mt-6 flex h-auto w-full flex-col-reverse items-center justify-center gap-10 lg:mt-24 lg:flex-row"
+          className="mt-6 mb-5 md:mb-20 flex h-auto w-full flex-col-reverse items-center justify-center gap-10 lg:mt-24 lg:flex-row"
           id="about"
         >
           {/* TULISAN */}
@@ -26,7 +26,7 @@ const Section = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Visit my Resume"
-              className="h-auto w-25"
+              className="mb-5 h-auto w-25"
             >
               <div className="relative h-14 w-30">
                 <div className="absolute top-0 left-0 z-2 flex h-full w-full items-center justify-center rounded-xl border-2 border-[#474306]">
@@ -70,6 +70,18 @@ const Section = () => {
               <div className="absolute top-3 left-[-5px] z-2 h-full w-full rounded-full border-3 border-[#474306]"></div>
             </div>
           </div>
+        </div>
+        <div className="text-justify text-sm text-[#03045E] md:text-lg xl:w-[50%]">
+          Hello! I'm Raihan Fajar Ramadhan, a passionate Full-Stack Web
+          Developer with around one year of experience in bringing digital ideas
+          to life. I specialize in crafting robust and intuitive web
+          applications, with a strong focus on the modern front-end using React
+          and Next.js, coupled with the efficiency of Tailwind CSS for sleek,
+          responsive designs <br /> <br /> I thrive on turning concepts into functional,
+          engaging realities. Currently, I'm dedicated to continuous learning,
+          actively seeking a challenging full-stack position, and exploring new
+          opportunities to further develop my skills and contribute to
+          innovative projects
         </div>
       </section>
     </>
