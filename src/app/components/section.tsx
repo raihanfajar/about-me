@@ -7,8 +7,8 @@ const Section = () => {
       <section className="container mx-auto gap-20 px-10">
         {/* HERO */}
         <div
-          className="mt-6 mb-5 md:mb-20 flex h-auto w-full flex-col-reverse items-center justify-center gap-10 lg:mt-24 lg:flex-row"
-          id="about"
+          className="mt-6 mb-5 flex h-auto w-full flex-col-reverse items-center justify-center gap-10 md:mb-20 lg:mt-24 lg:flex-row"
+          id="hero"
         >
           {/* TULISAN */}
           <div className="flex flex-col text-[#03045E]">
@@ -73,15 +73,76 @@ const Section = () => {
         </div>
         <div className="text-justify text-sm text-[#03045E] md:text-lg xl:w-[50%]">
           Hello! I'm Raihan Fajar Ramadhan, a passionate Full-Stack Web
-          Developer with around one year of experience in bringing digital ideas
-          to life. I specialize in crafting robust and intuitive web
-          applications, with a strong focus on the modern front-end using React
-          and Next.js, coupled with the efficiency of Tailwind CSS for sleek,
-          responsive designs <br /> <br /> I thrive on turning concepts into functional,
-          engaging realities. Currently, I'm dedicated to continuous learning,
-          actively seeking a challenging full-stack position, and exploring new
-          opportunities to further develop my skills and contribute to
-          innovative projects
+          Developer with a year of experience. I specialize in crafting
+          responsive web apps using React, Next.js, and Tailwind CSS. Always
+          keen on learning and seeking new challenges.
+        </div>
+        {/* END OF HERO */}
+
+        {/* ABOUT */}
+        <div className="mt-55 w-full" id="about">
+          <h1 className="mb-10 text-6xl font-bold text-[#03045E]"> about. </h1>
+          <p className="text-md text-justify text-[#03045E] xl:w-[50%]">
+            I'm an Informatics graduate who further specialized in web
+            development at Purwadhika Digital School. Drawn to web's unique
+            blend of logic and boundless creativity, I thrive on building
+            dynamic applications. My hands-on experience includes developing
+            this portfolio website and a comprehensive company profile site
+            featuring a functional blog creation platform.
+          </p>
+
+          <div className="mt-15 w-full">
+            <div className="flex items-center gap-10">
+              <div
+                className="h-0 w-0 border-t-[50px] border-b-[50px] border-l-[100px] border-t-transparent border-b-transparent border-l-[#474306]"
+                style={{
+                  filter: "drop-shadow(5px 10px 5px rgba(71, 67, 6, 0.4))",
+                }}
+              ></div>
+              <div className="text-[#03045E]">
+                <h1 className="text-xl font-semibold">
+                  {" "}
+                  Purwadhika Digital School{" "}
+                </h1>
+                <h1 className="text-lg font-semibold"> 2025 </h1>
+                <p className="text-md text-justify">
+                  {" "}
+                  At Purwadhika Digital School, I completed the Full-Stack Web
+                  Development program, mastering technologies like React,
+                  Next.js, HTML, CSS, and PostgreSQL. Through intensive
+                  practical training, including mini-projects and a final
+                  capstone, Purwadhika effectively bridged the gap between
+                  theory and industry, equipping me with job-ready skills.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-20 flex items-center gap-10">
+              <div className="text-[#03045E]">
+                <h1 className="text-xl font-semibold md:text-right">
+                  {" "}
+                  Ahmad Dahlan University{" "}
+                </h1>
+                <h1 className="text-lg font-semibold md:text-right"> 2020 - 2025 </h1>
+                <p className="text-md text-justify">
+                  {" "}
+                  I graduated from Ahmad Dahlan University with a GPA of 3.78 in
+                  Informatics, where I developed a strong interest in web
+                  development. A significant part of my learning involved a
+                  real-world project in the MPTI course, where I led a team to
+                  build a photographer's portfolio website. This experience
+                  further honed my problem-solving, teamwork, and critical
+                  thinking skills
+                </p>
+              </div>
+              <div
+                className="h-0 w-0 border-t-[50px] border-r-[100px] border-b-[50px] border-t-transparent border-r-[#474306] border-b-transparent"
+                style={{
+                  filter: "drop-shadow(5px 10px 5px rgba(71, 67, 6, 0.4))",
+                }}
+              ></div>
+            </div>
+          </div>
         </div>
       </section>
     </>
