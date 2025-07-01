@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { FaReact, FaLightbulb } from "react-icons/fa";
+import { LuBookUp } from "react-icons/lu";
+import { RiTeamFill } from "react-icons/ri";
+import { IoSearch } from "react-icons/io5";
 
 const Section = () => {
   return (
@@ -92,9 +96,9 @@ const Section = () => {
           </p>
 
           <div className="mt-15 w-full">
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-5 md:gap-10">
               <div
-                className="h-0 w-0 border-t-[50px] border-b-[50px] border-l-[100px] border-t-transparent border-b-transparent border-l-[#474306]"
+                className="h-0 w-0 border-t-[30px] border-b-[30px] border-l-[60px] border-t-transparent border-b-transparent border-l-[#474306] md:border-t-[50px] md:border-b-[50px] md:border-l-[100px]"
                 style={{
                   filter: "drop-shadow(5px 10px 5px rgba(71, 67, 6, 0.4))",
                 }}
@@ -117,13 +121,16 @@ const Section = () => {
               </div>
             </div>
 
-            <div className="mt-20 flex items-center gap-10">
+            <div className="mt-20 flex items-center gap-5 md:gap-10">
               <div className="text-[#03045E]">
                 <h1 className="text-xl font-semibold md:text-right">
                   {" "}
                   Ahmad Dahlan University{" "}
                 </h1>
-                <h1 className="text-lg font-semibold md:text-right"> 2020 - 2025 </h1>
+                <h1 className="text-lg font-semibold md:text-right">
+                  {" "}
+                  2020 - 2025{" "}
+                </h1>
                 <p className="text-md text-justify">
                   {" "}
                   I graduated from Ahmad Dahlan University with a GPA of 3.78 in
@@ -136,11 +143,42 @@ const Section = () => {
                 </p>
               </div>
               <div
-                className="h-0 w-0 border-t-[50px] border-r-[100px] border-b-[50px] border-t-transparent border-r-[#474306] border-b-transparent"
+                className="h-0 w-0 border-t-[30px] border-r-[60px] border-b-[30px] border-t-transparent border-r-[#474306] border-b-transparent md:border-t-[50px] md:border-r-[100px] md:border-b-[50px]"
                 style={{
                   filter: "drop-shadow(5px 10px 5px rgba(71, 67, 6, 0.4))",
                 }}
               ></div>
+            </div>
+          </div>
+
+          <div className="mt-20 flex flex-col items-center justify-evenly xl:flex-row">
+            <div className="mb-10 flex w-full items-center justify-center">
+              <FaReact className="text-[100px]" />
+            </div>
+            <div className="flex w-full items-center justify-center">
+              <div className="rounded-xl border-2 border-[#474306] p-5">
+                <ul className="flex flex-col gap-4">
+                  <li className="flex items-center gap-3 text-lg font-medium">
+                    <FaLightbulb className="text-2xl text-[#03045E]" />
+                    <span>Passion & Creativity</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-lg font-medium">
+                    <LuBookUp className="text-2xl text-[#03045E]" />
+                    <span>Continuous Learning</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-lg font-medium">
+                    <RiTeamFill className="text-2xl text-[#03045E]" />
+                    <span>Collaboration & Leadership</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-lg font-medium">
+                    <IoSearch className="text-2xl text-[#03045E]" />
+                    <span>Attention to Detail & Timeliness</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="my-10 flex w-full items-center justify-center">
+              <FaReact className="text-[100px]" />
             </div>
           </div>
         </div>
