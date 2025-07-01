@@ -42,9 +42,9 @@ const Navbar = () => {
           Raihan Fajar Ramadhan
         </h1>
         <div className="hidden justify-evenly gap-20 text-lg font-medium md:flex">
-          <p>Home</p>
-          <p>About</p>
-          <p>Work</p>
+          <p className="font-semibold">Home</p>
+          <p className="font-semibold">About</p>
+          <p className="font-semibold">Work</p>
         </div>
         <div className="hidden justify-evenly gap-10 md:flex">
           <a
