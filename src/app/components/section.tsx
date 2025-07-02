@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { FaReact, FaLightbulb } from "react-icons/fa";
 import { LuBookUp } from "react-icons/lu";
 import { RiTeamFill } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
+import { motion } from "motion/react";
 
 const Section = () => {
   return (
@@ -21,8 +23,10 @@ const Section = () => {
               {" "}
               WEB
             </span>
-            <span className="mt-2 text-5xl font-extrabold md:mt-4 md:text-8xl">
-              DEVEPLOPER
+            <span className="mt-0 text-5xl font-extrabold md:mt-0 md:text-8xl">
+              {" "}
+              {/* KUNCI: Ubah mt-2 dan md:mt-4 menjadi mt-0 dan md:mt-0 */}
+              DEVELOPER
             </span>
             <p className="mb-5 text-base md:text-xl">based in Jakarta</p>
             <a
@@ -75,7 +79,7 @@ const Section = () => {
             </div>
           </div>
         </div>
-        <div className="text-justify text-sm text-[#03045E] md:text-lg xl:w-[50%]">
+        <div className="text-md text-justify text-[#03045E] md:text-lg xl:w-[50%]">
           Hello! I'm Raihan Fajar Ramadhan, a passionate Full-Stack Web
           Developer with a year of experience. I specialize in crafting
           responsive web apps using React, Next.js, and Tailwind CSS. Always
@@ -86,7 +90,7 @@ const Section = () => {
         {/* ABOUT */}
         <div className="mt-55 w-full" id="about">
           <h1 className="mb-10 text-6xl font-bold text-[#03045E]"> about. </h1>
-          <p className="text-md text-justify text-[#03045E] xl:w-[50%]">
+          <p className="text-justify text-lg text-[#03045E] xl:w-[50%]">
             I'm an Informatics graduate who further specialized in web
             development at Purwadhika Digital School. Drawn to web's unique
             blend of logic and boundless creativity, I thrive on building
@@ -153,7 +157,16 @@ const Section = () => {
 
           <div className="mt-20 flex flex-col items-center justify-evenly xl:flex-row">
             <div className="mb-10 flex w-full items-center justify-center">
-              <FaReact className="text-[100px]" />
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  repeat: Infinity, // Ulangi animasi tanpa henti
+                  duration: 2, // Satu putaran dalam 2 detik
+                  ease: "linear", // Kecepatan putaran konstan
+                }}
+              >
+                <FaReact className="text-[100px]" />
+              </motion.div>
             </div>
             <div className="flex w-full items-center justify-center">
               <div className="rounded-xl border-2 border-[#474306] p-5">
@@ -178,7 +191,16 @@ const Section = () => {
               </div>
             </div>
             <div className="my-10 flex w-full items-center justify-center">
-              <FaReact className="text-[100px]" />
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  repeat: Infinity, // Ulangi animasi tanpa henti
+                  duration: 2, // Satu putaran dalam 2 detik
+                  ease: "linear", // Kecepatan putaran konstan
+                }}
+              >
+                <FaReact className="text-[100px]" />
+              </motion.div>
             </div>
           </div>
         </div>
