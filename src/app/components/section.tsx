@@ -5,7 +5,7 @@ import { FaReact, FaLightbulb } from "react-icons/fa";
 import { LuBookUp } from "react-icons/lu";
 import { RiTeamFill } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const Section = () => {
   return (
@@ -47,48 +47,67 @@ const Section = () => {
           </div>
 
           {/* FOTO */}
-          <div className="mb-5 flex h-full w-full items-center justify-center">
-            <div className="relative flex aspect-square h-auto max-h-[350px] w-full max-w-[350px] items-center justify-center p-7 md:h-[450px] md:w-[450px]">
-              {/* Tanda +++ */}
-              <div className="absolute top-4 right-4 z-10 flex flex-col gap-1">
-                <div className="relative h-5 w-5">
-                  <div className="absolute top-1/2 left-1/2 h-[3px] w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
-                  <div className="absolute top-1/2 left-1/2 h-full w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
-                </div>
-                <div className="relative ml-5 h-5 w-5">
-                  {" "}
-                  <div className="absolute top-1/2 left-1/2 h-[3px] w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
-                  <div className="absolute top-1/2 left-1/2 h-full w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
-                </div>
-              </div>
 
-              {/* Tanda //// */}
-              <div className="absolute bottom-8 left-8 z-10 rotate-[30deg] text-3xl font-bold text-[#474306]">
-                ////
-              </div>
+          <div className="mb-5 flex h-auto w-full items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className="flex h-full w-full items-center justify-center"
+            >
+              <div className="relative flex aspect-square h-auto max-h-[350px] w-full max-w-[350px] items-center justify-center p-7 md:h-[450px] md:w-[450px]">
+                {/* Tanda +++ */}
+                <div className="absolute top-4 right-4 z-10 flex flex-col gap-1">
+                  <div className="relative h-5 w-5">
+                    <div className="absolute top-1/2 left-1/2 h-[3px] w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
+                    <div className="absolute top-1/2 left-1/2 h-full w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
+                  </div>
+                  <div className="relative ml-5 h-5 w-5">
+                    {" "}
+                    <div className="absolute top-1/2 left-1/2 h-[3px] w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
+                    <div className="absolute top-1/2 left-1/2 h-full w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#474306]"></div>
+                  </div>
+                </div>
 
-              <div className="absolute top-0 left-0 z-1 aspect-square h-full w-full overflow-hidden rounded-full">
-                <Image
-                  src="/pajar.jpg"
-                  alt="Profile Picture"
-                  fill={true}
-                  objectFit="cover"
-                />
+                {/* Tanda //// */}
+                <div className="absolute bottom-8 left-8 z-10 rotate-[30deg] text-3xl font-bold text-[#474306]">
+                  ////
+                </div>
+
+                <div className="absolute top-0 left-0 z-1 aspect-square h-full w-full overflow-hidden rounded-full">
+                  <Image
+                    src="/pajar.jpg"
+                    alt="Profile Picture"
+                    fill={true}
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="absolute top-3 left-[-5px] z-2 h-full w-full rounded-full border-3 border-[#474306]"></div>
               </div>
-              <div className="absolute top-3 left-[-5px] z-2 h-full w-full rounded-full border-3 border-[#474306]"></div>
-            </div>
+            </motion.div>
           </div>
+
+          {/* END OF PHOTO */}
         </div>
         <div className="text-md text-justify text-[#03045E] md:text-lg xl:w-[50%]">
-          Hello! I'm Raihan Fajar Ramadhan, a passionate Full-Stack Web
-          Developer with a year of experience. I specialize in crafting
-          responsive web apps using React, Next.js, and Tailwind CSS. Always
-          keen on learning and seeking new challenges.
+          <motion.p
+            initial={{ opacity: 0, y: 20 }} // Mulai dari tak terlihat dan sedikit ke bawah
+            animate={{ opacity: 1, y: 0 }} // Animasi ke terlihat dan posisi normal
+            transition={{ duration: 0.6, delay: 0.2 }} // Durasi dan delay animasi
+          >
+            Hello! I'm Raihan Fajar Ramadhan, a passionate Full-Stack Web
+            Developer with a year of experience. I specialize in crafting
+            responsive web apps using React, Next.js, and Tailwind CSS. Always
+            keen on learning and seeking new challenges.
+          </motion.p>
         </div>
         {/* END OF HERO */}
 
         {/* ABOUT */}
-        <div className="mt-55 w-full" id="about">
+        <div className="mt-60 w-full" id="about">
           <h1 className="mb-10 text-6xl font-bold text-[#03045E]"> about. </h1>
           <p className="text-justify text-lg text-[#03045E] xl:w-[50%]">
             I'm an Informatics graduate who further specialized in web
@@ -100,31 +119,60 @@ const Section = () => {
           </p>
 
           <div className="mt-15 w-full">
-            <div className="flex items-center gap-5 md:gap-10">
-              <div
-                className="h-0 w-0 border-t-[30px] border-b-[30px] border-l-[60px] border-t-transparent border-b-transparent border-l-[#474306] md:border-t-[50px] md:border-b-[50px] md:border-l-[100px]"
-                style={{
-                  filter: "drop-shadow(5px 10px 5px rgba(71, 67, 6, 0.4))",
-                }}
-              ></div>
-              <div className="text-[#03045E]">
-                <h1 className="text-xl font-semibold">
-                  {" "}
-                  Purwadhika Digital School{" "}
-                </h1>
-                <h1 className="text-lg font-semibold"> 2025 </h1>
-                <p className="text-md text-justify">
-                  {" "}
-                  At Purwadhika Digital School, I completed the Full-Stack Web
-                  Development program, mastering technologies like React,
-                  Next.js, HTML, CSS, and PostgreSQL. Through intensive
-                  practical training, including mini-projects and a final
-                  capstone, Purwadhika effectively bridged the gap between
-                  theory and industry, equipping me with job-ready skills.
-                </p>
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: -100, // Atur posisi awal dari kiri (misalnya -100px atau -10vw)
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0, // Slide in ke posisi aslinya
+                transition: {
+                  duration: 1, // Durasi animasi masuk
+                  ease: "easeOut", // Transisi yang lebih mulus untuk sliding
+                },
+              }}
+            >
+              <div className="flex items-center gap-5 md:gap-10">
+                <div
+                  className="h-0 w-0 border-t-[30px] border-b-[30px] border-l-[60px] border-t-transparent border-b-transparent border-l-[#474306] md:border-t-[50px] md:border-b-[50px] md:border-l-[100px]"
+                  style={{
+                    filter: "drop-shadow(5px 10px 5px rgba(71, 67, 6, 0.4))",
+                  }}
+                ></div>
+                <div className="text-[#03045E]">
+                  <h1 className="text-xl font-semibold">
+                    {" "}
+                    Purwadhika Digital School{" "}
+                  </h1>
+                  <h1 className="text-lg font-semibold"> 2025 </h1>
+                  <p className="text-md text-justify">
+                    {" "}
+                    At Purwadhika Digital School, I completed the Full-Stack Web
+                    Development program, mastering technologies like React,
+                    Next.js, HTML, CSS, and PostgreSQL. Through intensive
+                    practical training, including mini-projects and a final
+                    capstone, Purwadhika effectively bridged the gap between
+                    theory and industry, equipping me with job-ready skills.
+                  </p>
+                </div>
               </div>
-            </div>
+            </motion.div>
 
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: 100, // Atur posisi awal dari kiri (misalnya -100px atau -10vw)
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0, // Slide in ke posisi aslinya
+                transition: {
+                  duration: 1, // Durasi animasi masuk
+                  ease: "easeOut", // Transisi yang lebih mulus untuk sliding
+                },
+              }}
+            >
             <div className="mt-20 flex items-center gap-5 md:gap-10">
               <div className="text-[#03045E]">
                 <h1 className="text-xl font-semibold md:text-right">
@@ -153,6 +201,7 @@ const Section = () => {
                 }}
               ></div>
             </div>
+            </motion.div>
           </div>
 
           <div className="mt-20 flex flex-col items-center justify-evenly xl:flex-row">
