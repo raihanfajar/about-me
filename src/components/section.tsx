@@ -27,7 +27,7 @@ const Section = () => {
     );
   return (
     <>
-      <section className="container mx-auto max-w-screen gap-20 px-10">
+      <section className="container mx-auto  gap-20 px-10">
         {/* HERO */}
         <div
           className="mt-6 mb-5 flex h-auto w-full flex-col-reverse items-center justify-center gap-10 md:mb-10 lg:mt-24 lg:flex-row"

@@ -1,17 +1,76 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaReact,FaGithub,FaGitAlt } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaGithub,
+  FaGitAlt,
+} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiTypescript, SiExpress, SiPostgresql } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 
-export default function Section2() {
+export default function Skills() {
   return (
     <>
       <section className="container mx-auto mt-65 px-10">
         {/* SKILLS */}
-        <div className="flex h-auto w-full flex-col items-center justify-center gap-15">
-          <h1 className="font-semibold text-2xl">Skills</h1>
+
+        {/* Mobile */}
+        <div className="flex w-full flex-col items-center justify-center">
+          <h1 className="mb-10 text-2xl font-semibold">Skills</h1>
+          <div className="grid grid-cols-3 items-center gap-y-8 gap-x-10">
+            <div className="flex flex-col items-center justify-center">
+              <FaHtml5 className="text-3xl" />
+              <p className="font-semibold">HTML</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <FaCss3Alt className="text-3xl" />
+              <p className="font-semibold">CSS</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <IoLogoJavascript className="text-3xl" />
+              <p className="font-semibold">JavaScript</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <FaReact className="text-3xl" />
+              <p className="font-semibold">React</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <RiNextjsFill className="text-3xl" />
+              <p className="font-semibold">Next.js</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <SiTypescript className="text-3xl" />
+              <p className="font-semibold">TypeScript</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <SiExpress className="text-3xl" />
+              <p className="font-semibold">Express.js</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <SiPostgresql className="text-3xl" />
+              <p className="font-semibold">Postgresql</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <GrMysql className="text-3xl" />
+              <p className="font-semibold">MySql</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <FaGithub className="text-3xl" />
+              <p className="font-semibold">Github</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <FaGitAlt className="text-3xl" />
+              <p className="font-semibold">Git</p>
+            </div>
+          </div>
+        </div>
+
+        {/* DESKTOP */}
+        <div className="hidden h-auto w-full flex-col items-center justify-center gap-15 md:flex">
+          <h1 className="text-2xl font-semibold">Skills</h1>
           {/* SKILLS ROW 1 */}
           <div className="flex h-auto justify-center gap-10">
             <div className="flex flex-col items-center justify-center">
