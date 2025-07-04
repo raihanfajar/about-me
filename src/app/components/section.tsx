@@ -7,16 +7,15 @@ import { RiTeamFill } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
 import { motion } from "framer-motion";
 
-
 const containerVariants = {
   hidden: { opacity: 0, y: 50 }, // Mulai dari tidak terlihat dan sedikit di bawah
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      when: "beforeChildren",   // Animasi container selesai sebelum anak-anak (kata) mulai
-      staggerChildren: 0.03,    // Jeda antar animasi setiap anak (kata). Sesuaikan nilai ini.
-      duration: 2             // Durasi animasi transisi container itu sendiri
+      when: "beforeChildren", // Animasi container selesai sebelum anak-anak (kata) mulai
+      staggerChildren: 0.03, // Jeda antar animasi setiap anak (kata). Sesuaikan nilai ini.
+      duration: 2, // Durasi animasi transisi container itu sendiri
     },
   },
 };
@@ -28,7 +27,7 @@ const Section = () => {
     );
   return (
     <>
-      <section className="container mx-auto gap-20 px-10">
+      <section className="container mx-auto max-w-screen gap-20 px-10">
         {/* HERO */}
         <div
           className="mt-6 mb-5 flex h-auto w-full flex-col-reverse items-center justify-center gap-10 md:mb-10 lg:mt-24 lg:flex-row"
@@ -65,7 +64,6 @@ const Section = () => {
           </div>
 
           {/* FOTO */}
-
           <div className="mb-5 flex h-auto w-full items-center justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -103,7 +101,7 @@ const Section = () => {
                     objectFit="cover"
                   />
                 </div>
-                <div className="absolute top-3 left-[-5px] z-2 h-full w-full rounded-full border-3 border-[#474306]"></div>
+                <div className="absolute top-3 left-0 z-2 h-full w-full rounded-full border-3 border-[#474306]"></div>
               </div>
             </motion.div>
           </div>
@@ -128,7 +126,7 @@ const Section = () => {
         <div className="mt-70 w-full" id="about">
           <h1 className="mb-10 text-6xl font-bold text-[#03045E]"> about. </h1>
           <motion.div
-          variants={containerVariants}
+            variants={containerVariants}
             initial="hidden" // State awal saat komponen dimuat
             whileInView="visible" // State saat elemen masuk viewport
             viewport={{ once: true, amount: 0.8 }} // Animasi hanya sekali, saat 50% elemen terlihat
@@ -249,28 +247,49 @@ const Section = () => {
                 <FaReact className="text-[100px]" />
               </motion.div>
             </div>
+
             <div className="flex w-full items-center justify-center">
-              <div className="rounded-xl border-2 border-[#474306] p-5">
-                <ul className="flex flex-col gap-4">
-                  <li className="flex items-center gap-3 text-lg font-medium">
-                    <FaLightbulb className="text-2xl text-[#03045E]" />
-                    <span>Passion & Creativity</span>
-                  </li>
-                  <li className="flex items-center gap-3 text-lg font-medium">
-                    <LuBookUp className="text-2xl text-[#03045E]" />
-                    <span>Continuous Learning</span>
-                  </li>
-                  <li className="flex items-center gap-3 text-lg font-medium">
-                    <RiTeamFill className="text-2xl text-[#03045E]" />
-                    <span>Collaboration & Leadership</span>
-                  </li>
-                  <li className="flex items-center gap-3 text-lg font-medium">
-                    <IoSearch className="text-2xl text-[#03045E]" />
-                    <span>Attention to Detail & Timeliness</span>
-                  </li>
-                </ul>
-              </div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 100, // Atur posisi awal dari kiri (misalnya -100px atau -10vw)
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0, // Slide in ke posisi aslinya
+                  transition: {
+                    duration: 1, // Durasi animasi masuk
+                    ease: "easeOut", // Transisi yang lebih mulus untuk sliding
+                  },
+                }}
+                viewport={{
+                  // --- KUNCI PERUBAHAN DI SINI ---
+                  amount: 0.5, // Animasi berjalan saat 50% elemen terlihat di viewport
+                }}
+              >
+                <div className="rounded-xl border-2 border-[#474306] p-5">
+                  <ul className="flex flex-col gap-4">
+                    <li className="flex items-center gap-3 text-lg font-medium">
+                      <FaLightbulb className="text-2xl text-[#03045E]" />
+                      <span>Passion & Creativity</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-lg font-medium">
+                      <LuBookUp className="text-2xl text-[#03045E]" />
+                      <span>Continuous Learning</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-lg font-medium">
+                      <RiTeamFill className="text-2xl text-[#03045E]" />
+                      <span>Collaboration & Leadership</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-lg font-medium">
+                      <IoSearch className="text-2xl text-[#03045E]" />
+                      <span>Attention to Detail & Timeliness</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
             </div>
+
             <div className="my-10 flex w-full items-center justify-center">
               <motion.div
                 animate={{ rotate: 360 }}

@@ -116,10 +116,12 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background-color: #fbf8cc; 
+  background-color: #fbf8cc;
+  overflow-x: hidden;
 }
 
 html {
