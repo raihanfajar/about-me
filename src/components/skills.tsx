@@ -14,13 +14,13 @@ import { GrMysql } from "react-icons/gr";
 export default function Skills() {
   return (
     <>
-      <section className="container mx-auto mt-65 px-10">
+      <section className="container mx-auto mt-40 px-10 md:mt-65 text-[#03045E]">
         {/* SKILLS */}
 
         {/* Mobile */}
         <div className="flex w-full flex-col items-center justify-center md:hidden">
           <h1 className="mb-10 text-2xl font-semibold">Skills</h1>
-          <div className="grid grid-cols-3 items-center gap-y-8 gap-x-10">
+          <div className="grid grid-cols-3 items-center gap-x-10 gap-y-8">
             <div className="flex flex-col items-center justify-center">
               <FaHtml5 className="text-3xl" />
               <p className="font-semibold">HTML</p>

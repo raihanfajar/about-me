@@ -121,12 +121,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fbf8cc;
-  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
   height: 100%;
+}
+
+*{
+  outline: 1px solid red;
 }
 
 body {
