@@ -18,7 +18,7 @@ export default function Skills() {
         {/* SKILLS */}
 
         {/* Mobile */}
-        <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center md:hidden">
           <h1 className="mb-10 text-2xl font-semibold">Skills</h1>
           <div className="grid grid-cols-3 items-center gap-y-8 gap-x-10">
             <div className="flex flex-col items-center justify-center">
