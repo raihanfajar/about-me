@@ -1,13 +1,16 @@
 import Navbar from "@/components/navbar";
-import Section from "@/components/section";
+import Hero from "@/components/hero";
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
+import About from "@/components/about";
+
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Section />
+      <Hero />
+      <About />
       <Skills />
       <Experience />
     </>
