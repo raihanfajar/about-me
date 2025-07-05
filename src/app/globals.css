@@ -122,10 +122,16 @@ body {
   padding: 0;
   background-color: #fbf8cc;
 }
-
+/* untuk debugging overflow 
+* {
+  box-sizing: border-box;
+  outline: 1px dashed red;  
+}
+*/
 html {
   scroll-behavior: smooth;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {

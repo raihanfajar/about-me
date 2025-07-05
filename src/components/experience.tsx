@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function Experience() {
   return (
-    <section className="container mx-auto mt-50 px-10 md:mt-65">
+    <section className="container mx-auto mt-50 px-10 md:mt-65 ">
       <div className="flex flex-col items-center justify-center px-4 md:px-10">
         <h1 className="mb-10 text-2xl font-semibold text-[#03045E]">
           Experience
@@ -31,6 +31,7 @@ function Experience() {
               </svg>
             </div>
             <div className="timeline-end">
+              <div className="overflow-x-hidden">
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -49,7 +50,7 @@ function Experience() {
                     played a key role in optimizing performance and scalability.
                   </p>
                 </div>
-              </motion.div>
+              </motion.div></div>
             </div>
             <hr className="bg-[#474306]" />
           </li>
@@ -58,6 +59,7 @@ function Experience() {
           <li>
             <hr className="bg-[#474306]" />
             <div className="timeline-start">
+              <div className="overflow-x-hidden">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +78,7 @@ function Experience() {
                     contributing to API development and system architecture.
                   </p>
                 </div>
-              </motion.div>
+              </motion.div></div>
             </div>
             <div className="timeline-middle text-[#f5ee84]">
               <svg
@@ -119,6 +121,7 @@ function Experience() {
               </svg>
             </div>
             <div className="timeline-end">
+              <div className="overflow-x-hidden">
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -137,7 +140,7 @@ function Experience() {
                     seamless integration with backend services.
                   </p>
                 </div>
-              </motion.div>
+              </motion.div></div>
             </div>
             <hr className="bg-[#474306]" />
           </li>
@@ -146,6 +149,7 @@ function Experience() {
           <li>
             <hr className="bg-[#474306]" />
             <div className="timeline-start">
+              <div className="overflow-x-hidden">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -164,7 +168,7 @@ function Experience() {
                     front-end issues.
                   </p>
                 </div>
-              </motion.div>
+              </motion.div></div>
             </div>
             <div className="timeline-middle text-[#f5ee84]">
               <svg

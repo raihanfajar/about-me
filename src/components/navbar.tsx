@@ -6,70 +6,64 @@ import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 
 const Navbar = () => {
-  // State untuk melacak apakah halaman sudah digulir ke bawah
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    // Fungsi yang akan dipanggil saat event scroll terjadi
     const handleScroll = () => {
-      // Jika posisi gulir Y (scrollY) lebih dari 50 piksel, set 'scrolled' menjadi true
-      // Anda bisa mengubah '50' ini ke nilai yang Anda inginkan
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
-    // Tambahkan event listener untuk event 'scroll' pada objek window
     window.addEventListener("scroll", handleScroll);
-
-    // Fungsi cleanup: Ini akan dijalankan saat komponen dilepas (unmount)
-    // Penting untuk menghapus event listener agar tidak terjadi memory leak
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div
-      className={`sticky top-4 z-50 container mx-auto mt-4 rounded-full px-6`}
-    >
-      <nav
-        className={`mt-4 flex w-full items-center justify-center gap-5 rounded-full p-5 md:justify-between md:border-2 md:border-black md:shadow-xs ${scrolled ? "bg-[#F5EE84] shadow-lg" : "bg-transparent"}`}
+    <div className="sticky top-5 z-50 w-full bg-transparent">
+      <div
+        className={`mx-auto mt-4 w-[95%] rounded-full  lg:px-6 transition-all duration-300 ${
+          scrolled ? "bg-[#F5EE84] shadow-md" : ""
+        }  border-2 border-black`}
       >
-        <h1 className="text-center text-2xl font-bold text-[#03045E]">
-          Raihan Fajar Ramadhan
-        </h1>
-        <div className="hidden justify-evenly gap-15 text-lg font-medium md:flex">
-          <p className="font-semibold">Home</p>
-          <p className="font-semibold">About</p>
-          <p className="font-semibold">Work</p>
-        </div>
-        <div className="hidden justify-evenly gap-10 md:flex">
-          <a
-            href="https://www.linkedin.com/in/raihan-fajar-ramadhan/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ImLinkedin size={30} />
-          </a>
-          <a
-            href="https://www.instagram.com/fajar_raihan/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram size={30} />
-          </a>
-          <a
-            href="https://www.github.com/raihanfajar"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub size={30} />
-          </a>
-        </div>
-      </nav>
+        <nav
+          className={`flex flex-col items-center justify-center gap-3 rounded-full py-4 md:flex-row md:justify-between md:px-8 md:py-5`}
+        >
+          <h1 className="text-center text-xl font-bold text-[#03045E] md:text-2xl">
+            Raihan Fajar Ramadhan
+          </h1>
+
+          <div className="hidden gap-8 text-lg font-medium md:flex">
+            <p className="font-semibold cursor-pointer">Home</p>
+            <p className="font-semibold cursor-pointer">About</p>
+            <p className="font-semibold cursor-pointer">Work</p>
+          </div>
+
+          <div className="hidden items-center gap-6 md:flex">
+            <a
+              href="https://www.linkedin.com/in/raihan-fajar-ramadhan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <ImLinkedin size={24} />
+            </a>
+            <a
+              href="https://www.instagram.com/fajar_raihan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={24} />
+            </a>
+            <a
+              href="https://www.github.com/raihanfajar"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub size={24} />
+            </a>
+          </div>
+        </nav>
+      </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ import { GrMysql } from "react-icons/gr";
 export default function Skills() {
   return (
     <>
-      <section className="container mx-auto mt-40 px-10 md:mt-65 text-[#03045E]">
+      <section className="container mx-auto mt-40 px-10 md:mt-65 text-[#03045E] ">
         {/* SKILLS */}
 
         {/* Mobile */}
