@@ -132,6 +132,7 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   overflow-x: hidden;
+  scroll-padding-top: 150px;
 }
 
 body {

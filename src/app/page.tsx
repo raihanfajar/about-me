@@ -6,6 +6,7 @@ import About from "@/components/about";
 import Testimony from "@/components/testimony";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import Work from "@/components/work";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <Work />
       <Experience />
       <Testimony />
       <Contact />

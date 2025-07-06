@@ -110,7 +110,6 @@ function Contact() {
                 setSubmitting(false);
                 return;
               }
-
               emailjs
                 .send(
                   SERVICE_ID,
@@ -124,7 +123,9 @@ function Contact() {
                 )
                 .then(
                   () => {
-                    setStatus("✅ Message sent successfully! I will reply to your message as soon as possible.");
+                    setStatus(
+                      "✅ Message sent successfully! I will reply to your message as soon as possible.",
+                    );
                     resetForm();
                   },
                   (error) => {

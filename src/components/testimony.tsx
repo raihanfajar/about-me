@@ -20,7 +20,7 @@ function Testimony() {
               "Working with Raihan was a pleasure; his collaborative spirit and
               problem-solving skills are truly outstanding."
             </p>
-            <h1 className=" text-xl font-semibold text-blue-700 mb-5">
+            <h1 className="mb-5 text-xl font-semibold text-blue-700">
               David Rodriguez
             </h1>
           </div>
@@ -79,9 +79,7 @@ function Testimony() {
               "Raihan consistently delivers clean, robust code, turning complex
               ideas into seamless web experiences."
             </p>
-            <h1 className=" text-xl font-semibold text-blue-700 ">
-              Aisha Khan
-            </h1>
+            <h1 className="text-xl font-semibold text-blue-700">Aisha Khan</h1>
           </div>
           <div className="absolute right-0 bottom-5 flex h-10 w-40 items-center justify-center rounded-2xl border-2 border-black bg-[#fbf8cc]">
             <div className="rating pointer-events-none gap-1">
@@ -138,9 +136,7 @@ function Testimony() {
               "His dedication to crafting intuitive and high-performance apps
               made a significant impact on our project."
             </p>
-            <h1 className=" text-xl font-semibold text-blue-700">
-              Sarah Chen
-            </h1>
+            <h1 className="text-xl font-semibold text-blue-700">Sarah Chen</h1>
           </div>
           <div className="absolute right-0 bottom-5 flex h-10 w-40 items-center justify-center rounded-2xl border-2 border-black bg-[#fbf8cc]">
             <div className="rating pointer-events-none gap-1">
